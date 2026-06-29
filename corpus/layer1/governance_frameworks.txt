@@ -1,0 +1,118 @@
+EU AI ACT — KEY PROVISIONS FOR ENTERPRISE AI DEPLOYMENT
+Summarized Reference for Governance Practitioners | Based on Regulation (EU) 2024/1689
+
+STRUCTURE AND SCOPE
+The EU AI Act (entered into force August 1, 2024) establishes a risk-based regulatory framework for AI systems placed on or used in the EU market. It applies to providers, deployers, importers, distributors, and product manufacturers. The Act classifies AI systems into four risk categories with differentiated obligations.
+
+PROHIBITED AI PRACTICES (Article 5) — Effective February 2, 2025
+The following AI applications are categorically banned:
+1. Subliminal manipulation techniques causing harm to persons
+2. Exploitation of vulnerabilities of specific groups (age, disability)
+3. Social scoring by public authorities for general purposes
+4. Real-time remote biometric identification in public spaces by law enforcement (with narrow exceptions)
+5. AI-based emotion recognition in workplace or educational settings (with exceptions for safety-purpose uses)
+6. Biometric categorization systems inferring sensitive attributes (race, political opinions, sexual orientation)
+7. Predictive policing based solely on profiling
+Enterprise implication: Any agentic system that approaches these categories — even as a feature, not a primary function — requires immediate legal review.
+
+HIGH-RISK AI SYSTEMS (Articles 6-7, Annex III) — Full obligations apply
+AI systems are classified as high-risk when they are: (a) safety components of regulated products under EU harmonization legislation, OR (b) deployed in one of eight high-risk application areas:
+1. Biometric identification and categorization
+2. Critical infrastructure (water, energy, transport, digital infrastructure)
+3. Education and vocational training (access, assessment, grading)
+4. Employment and worker management (recruitment, promotion, task allocation, termination, performance monitoring)
+5. Essential private and public services (credit scoring, insurance risk, health and life insurance)
+6. Law enforcement
+7. Migration, asylum, border control management
+8. Administration of justice and democratic processes
+
+High-Risk Obligations:
+- Risk management system (lifecycle, iterative)
+- Data governance (training data quality, bias assessment)
+- Technical documentation (predefined before market placement)
+- Record-keeping and automatic logging (traceability)
+- Transparency and information to deployers
+- Human oversight measures (must be technically feasible for deployer to implement)
+- Accuracy, robustness, cybersecurity
+
+Enterprise implication: An agent that automates HR decisions (hiring, performance evaluation, termination recommendations) is presumptively high-risk. Proceed only after a Conformity Assessment and full technical documentation.
+
+LIMITED RISK AI SYSTEMS (Article 50) — Transparency obligations only
+AI systems interacting with humans (chatbots, deepfakes, AI-generated content) must:
+- Inform users they are interacting with AI (unless context makes it obvious)
+- Label AI-generated images, audio, video content
+- Disclose emotion recognition or biometric categorization (when not prohibited)
+Enterprise implication: Every enterprise chatbot, RAG-powered Q&A system, and conversational agent must have explicit disclosure that users are interacting with an AI system.
+
+GENERAL PURPOSE AI MODELS (Articles 51-56) — Effective August 2, 2025
+Models with systemic risk (≥10^25 FLOPs training compute, or designated by Commission):
+- Adversarial testing / red-teaming obligations
+- Incident reporting to AI Office
+- Cybersecurity obligations
+- Energy efficiency transparency
+
+Standard GPAI models (all others used to build AI systems):
+- Technical documentation
+- Copyright compliance information
+- Summary of training data
+
+Enterprise implication: When building agentic systems on top of foundation models (GPT-4, Claude, Llama), organizations must obtain and retain technical documentation from model providers as part of their own compliance package.
+
+NIST AI RISK MANAGEMENT FRAMEWORK (AI RMF 1.0)
+Overview: The NIST AI RMF provides a voluntary, non-prescriptive framework for managing AI risks. It is organized around four core functions: GOVERN, MAP, MEASURE, and MANAGE.
+
+GOVERN: Establishes organizational practices, policies, and accountability structures for AI risk.
+- Policies and processes for AI risk management are established, communicated, and enforced
+- AI risk management is integrated into organizational risk governance (ERM, audit, legal)
+- Roles and responsibilities for AI risk are explicitly assigned
+- Organizational culture supports responsible AI development and deployment
+- Teams have skills, competencies, and training appropriate to AI risk tasks
+
+MAP: Identifies and classifies AI risks in context.
+- Intended context, purposes, and uses of the AI system are established
+- Scientific basis for AI capabilities and limitations is understood
+- AI risk categories are identified (technical, organizational, third-party, societal)
+- Impacts on individuals, groups, organizations, and society are assessed
+- Likelihood and magnitude of negative impacts are estimated
+
+MEASURE: Analyzes and assesses identified AI risks.
+- Metrics for trustworthiness are established (accuracy, fairness, interpretability, privacy, robustness, safety)
+- AI system performance is evaluated against defined metrics pre-deployment and in deployment
+- Bias and fairness testing is conducted across relevant demographic groups
+- Uncertainty and confidence levels in AI outputs are quantified
+- Feedback mechanisms capture real-world performance data
+
+MANAGE: Prioritizes and addresses identified AI risks.
+- Response plans are developed for AI risks (mitigation, transfer, acceptance)
+- Residual risks are monitored continuously post-deployment
+- AI systems are decommissioned when risks exceed tolerance or system is no longer fit-for-purpose
+- Incident response plans are tested and maintained
+- Risk treatment decisions are documented and reviewed periodically
+
+NIST AI RMF TRUSTWORTHY AI CHARACTERISTICS
+The framework defines seven characteristics of trustworthy AI:
+1. Accountable and Transparent: Clear responsibility, explainable decisions
+2. Explainable and Interpretable: Outputs and processes understandable to stakeholders
+3. Fair with Bias Managed: Systematic bias identified and mitigated
+4. Privacy Enhanced: Individual privacy protected throughout lifecycle
+5. Reliable and Robust: Performs correctly under expected and unexpected conditions
+6. Safe: Does not endanger human health, safety, or the environment
+7. Secure and Resilient: Resists adversarial attacks and unexpected inputs
+
+ISO 42001:2023 — AI MANAGEMENT SYSTEM STANDARD
+Overview: ISO 42001 is the first international standard for AI management systems. It follows the ISO high-level structure (compatible with ISO 27001, ISO 9001) enabling integrated management systems.
+
+KEY CLAUSES RELEVANT TO AGENTIC AI:
+Clause 4 (Context): Organization must determine internal/external factors affecting AI objectives, identify interested parties and their requirements, define AI management system scope
+Clause 6 (Planning): AI risk assessment methodology, AI objectives aligned to organizational strategy, treatment of AI-specific risks and opportunities
+Clause 8 (Operation): AI system lifecycle controls, requirements for AI system development, data management controls, third-party AI system controls
+Clause 9 (Performance Evaluation): AI system performance monitoring, internal audit of AI management system, management review
+Clause 10 (Improvement): Nonconformity management, corrective actions, continual improvement
+
+Annex A Controls relevant to agents:
+- A.6.1: AI system impact assessment
+- A.6.2: AI system categorization by risk level
+- A.7.2: Data quality management
+- A.8.4: Third-party AI systems (model providers, API vendors)
+- A.9.3: Human oversight of AI system outputs
+- A.10.1: Responsible use policies

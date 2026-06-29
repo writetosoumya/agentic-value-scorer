@@ -1,0 +1,213 @@
+AI PROGRAM ECONOMICS REFERENCE
+Meridian Insurance Group | Cost & Benefit Parameters for AI Investment Decisions
+Finance & AI Strategy | Version 1.4 | January 2026
+Approved by: CFO and Chief AI & Data Officer
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 1: LOADED HOURLY COST RATES BY ROLE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The following fully loaded hourly rates (salary + benefits + overhead) are used for ROI calculations in AI investment proposals. These rates are approved by Finance for use in business case modeling.
+
+TECHNOLOGY ROLES
+- Principal AI/ML Engineer: $145/hour
+- Senior AI/ML Engineer: $118/hour
+- AI/ML Engineer: $95/hour
+- Data Engineer (Senior): $105/hour
+- Data Engineer: $82/hour
+- MLOps / LLMOps Engineer: $110/hour
+- Cloud Infrastructure Engineer: $98/hour
+- QA / Testing Engineer: $72/hour
+
+BUSINESS AND OPERATIONS ROLES
+- Claims Adjuster (Senior): $78/hour
+- Claims Adjuster: $58/hour
+- Underwriter (Senior): $95/hour
+- Underwriter: $72/hour
+- Customer Service Representative: $38/hour
+- Customer Service Team Lead: $52/hour
+- Insurance Operations Analyst: $62/hour
+- Compliance Analyst: $75/hour
+- Actuarial Analyst: $88/hour
+- Associate Actuary: $115/hour
+
+MANAGEMENT AND LEADERSHIP ROLES
+- Product Manager: $110/hour
+- Senior Product Manager: $135/hour
+- Program Manager: $125/hour
+- Director of Operations: $160/hour
+- VP level: $210/hour
+- C-Suite: $380/hour
+
+EXTERNAL / VENDOR RATES (for comparison)
+- Big 4 Consulting (AI practice): $350-$550/hour
+- Boutique AI Consultancy: $225-$375/hour
+- Offshore AI Development: $35-$65/hour
+- Freelance AI/ML Engineer: $125-$185/hour
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 2: AI IMPLEMENTATION COST BENCHMARKS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+These benchmarks represent Meridian's historical and industry-benchmarked costs for AI implementation by complexity tier. Use these as baseline estimates in business cases. Actual costs require formal project scoping.
+
+TIER 1 — SIMPLE AI DEPLOYMENT
+Definition: Pre-built AI tool or API integration with minimal customization. Limited data pipeline work. Single use case, single team.
+Examples: Internal chatbot using off-the-shelf LLM, document summarization tool, basic classification model using existing data.
+Typical cost range: $85,000 — $250,000
+Typical timeline: 6 — 16 weeks to production
+Typical team: 2-3 engineers, 1 product manager, 0.5 data engineer
+Key cost drivers: Integration effort, data preparation, user training, change management
+
+TIER 2 — MODERATE AI DEPLOYMENT
+Definition: Custom model development or significant LLM customization. Multiple data sources. Moderate integration complexity. RAG systems, fine-tuned models, agentic tools with defined scope.
+Examples: RAG-powered knowledge management system, claims triage agent, underwriting support tool, customer service agent with escalation logic.
+Typical cost range: $350,000 — $950,000
+Typical timeline: 16 — 36 weeks to production
+Typical team: 4-6 engineers, 1-2 data engineers, 1 MLOps engineer, 1 product manager, 0.5 compliance analyst
+Key cost drivers: Data pipeline, model development and evaluation, integration with core systems, bias testing, compliance review, change management
+
+TIER 3 — COMPLEX AI DEPLOYMENT
+Definition: Multi-agent architecture, core system integration, significant organizational change. Enterprise-scale deployment. Regulatory compliance build-out.
+Examples: End-to-end claims automation, AI-powered underwriting engine, multi-agent customer service platform, real-time fraud detection with autonomous action.
+Typical cost range: $1.2M — $4.5M
+Typical timeline: 9 — 24 months to production
+Typical team: 8-15 engineers, 3-5 data engineers, 2 MLOps engineers, 2 product managers, 1 compliance lead, 1 actuarial reviewer, program management
+Key cost drivers: Core system integration, regulatory compliance (model risk management, bias audit), organizational change management, training, extended testing and validation
+
+TIER 4 — ENTERPRISE AI PLATFORM
+Definition: Platform-level AI capability serving multiple use cases and business units. Foundational infrastructure investment.
+Examples: Enterprise AI governance platform, centralized ML/LLM platform, enterprise-wide agentic AI infrastructure.
+Typical cost range: $5M — $25M+
+Typical timeline: 18 — 48 months
+Key cost drivers: Platform architecture, data infrastructure, governance tooling, organizational capability building, ongoing operations
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 3: ONGOING OPERATIONAL COST PARAMETERS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+AI systems carry ongoing operational costs beyond initial implementation. These must be included in total cost of ownership calculations.
+
+LLM API COSTS (2026 benchmark rates)
+- Input tokens (per 1M): $0.25 — $15 depending on model tier
+- Output tokens (per 1M): $1.00 — $75 depending on model tier
+- Embedding calls: $0.02 — $0.13 per 1M tokens
+- Estimated monthly API cost for internal enterprise chatbot (10,000 employees, moderate usage): $8,000 — $35,000/month
+- Estimated monthly API cost for customer-facing claims agent (100,000 interactions/month): $45,000 — $180,000/month
+
+INFRASTRUCTURE COSTS
+- Cloud compute for model hosting (GPU): $4,500 — $28,000/month depending on scale
+- Vector database (Pinecone, Weaviate, ChromaDB cloud): $500 — $8,000/month
+- Data pipeline and orchestration: $800 — $4,500/month
+- Monitoring and observability (LangSmith, Langfuse, Datadog): $1,200 — $6,000/month
+
+HUMAN OVERSIGHT COSTS
+- HITL reviewer (claims agent, 40 hours/week oversight): 1.0 FTE Claims Adjuster = $120,640/year loaded
+- Model monitoring analyst (0.5 FTE): $47,500/year loaded
+- AI governance and compliance review: $25,000 — $75,000/year depending on regulatory tier
+- Annual independent model audit (Tier 1 systems): $85,000 — $250,000/audit
+
+COMPLIANCE AND RISK COSTS
+- Annual bias audit (required for underwriting/claims AI): $45,000 — $120,000
+- Regulatory filing and review (Colorado SB 169, state rate filings): $15,000 — $60,000/year
+- Legal review for AI contract clauses and vendor agreements: $25,000 — $80,000/year
+- Incident response preparedness: $20,000 — $50,000/year (tabletop exercises, runbooks)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 4: BENEFIT REALIZATION BENCHMARKS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Use these benchmarks to validate ROI assumptions in AI business cases. All figures represent Meridian-specific or insurance-industry benchmarks from verified deployments.
+
+CLAIMS OPERATIONS
+- AI-assisted first notice of loss (FNOL) processing: 65-80% reduction in average handle time
+- Claims document extraction and summarization: 45-70% reduction in adjuster review time
+- Subrogation opportunity identification: 15-25% increase in subrogation recovery rate
+- Claims fraud detection (ML model): 20-35% reduction in fraud losses, typical payback 8-14 months
+- Straight-through processing for simple claims (under $2,500): 70-85% automation rate achievable
+- Average cost per claims interaction reduction with AI: $18-$45 per claim depending on complexity
+
+UNDERWRITING OPERATIONS
+- Automated data gathering and pre-fill: 40-60% reduction in submission processing time
+- AI-assisted risk appetite screening: 30-50% reduction in time-to-quote for standard risks
+- Document classification and extraction: 55-75% reduction in manual data entry
+- Portfolio risk monitoring automation: 2-4 underwriter FTEs redeployed per $1B GWP
+
+CUSTOMER SERVICE
+- First contact resolution rate improvement with AI: 15-25 percentage points
+- Average handle time reduction for AI-augmented agents: 30-45%
+- Cost per contact reduction (AI deflection to self-service): $8-$22 per deflected contact
+- Customer satisfaction (CSAT) change with AI: -5 to +8 points depending on implementation quality
+- 24/7 availability value: Estimated 12-18% of customer inquiries occur outside business hours
+
+COMPLIANCE AND RISK OPERATIONS
+- Regulatory change monitoring automation: 60-80% reduction in analyst time for horizon scanning
+- Policy and procedure Q&A automation: 2-4 hours/employee/month recaptured across legal and compliance teams
+- Contract review AI assistance: 40-65% reduction in first-pass review time
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 5: ROI THRESHOLDS AND INVESTMENT CRITERIA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Meridian applies the following financial criteria when evaluating AI investment proposals:
+
+PAYBACK PERIOD REQUIREMENTS
+- Tier 1 AI systems (Critical): Maximum 18-month payback period required for approval
+- Tier 2 AI systems (High risk): Maximum 24-month payback period
+- Tier 3 AI systems (Moderate risk): Maximum 36-month payback period
+- Strategic/platform investments: Exception process with Board approval for longer paybacks
+
+MINIMUM ROI THRESHOLDS
+- Year 1 ROI: Not required (investment phase)
+- Year 2 ROI: Minimum 15% return on total investment
+- Year 3 ROI: Minimum 35% cumulative return
+- 5-year NPV: Must be positive at 8% discount rate (Meridian's internal hurdle rate)
+
+RISK-ADJUSTED ROI
+All AI business cases must present risk-adjusted ROI using a standard risk multiplier based on ARM™-equivalent risk assessment:
+- Green/Low risk projects: ROI multiplier 1.0 (no adjustment)
+- Amber/Medium risk projects: ROI discounted by 15% for risk
+- Red/High risk projects: ROI discounted by 30% for risk
+- Critical risk projects: ROI discounted by 50% — additional contingency reserve required
+
+MINIMUM BUSINESS CASE REQUIREMENTS
+All AI investments above $100,000 require:
+- Quantified benefit realization with named benefit owner
+- Implementation cost breakdown by phase
+- Total cost of ownership for 3 years including operational costs
+- Risk assessment aligned to Meridian AI Risk Classification
+- Change management plan with adoption milestones
+- Success metrics defined before project start
+- Exit/decommission plan if system does not perform
+
+OPPORTUNITY COST FRAMEWORK
+When evaluating whether to agentify a process, business cases must address:
+- Cost of current manual process (FTE hours × loaded rate × volume)
+- Cost of not automating relative to competitor capability
+- Regulatory risk of manual process errors vs. AI errors
+- Customer experience impact of status quo vs. AI-assisted process
+- Strategic positioning value beyond direct financial return
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 6: AVRE™ SCORE CALIBRATION FOR MERIDIAN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+These guidelines calibrate AVRE™ scoring for Meridian's specific financial context:
+
+ROI SCORE CALIBRATION
+- Score 1-3: Payback period >36 months OR Year 3 ROI <15%
+- Score 4-6: Payback 18-36 months, Year 3 ROI 15-35%
+- Score 7-8: Payback 12-18 months, Year 3 ROI 35-60%
+- Score 9-10: Payback <12 months, Year 3 ROI >60% OR transformational strategic value
+
+ROE SCORE CALIBRATION (Return on Effort)
+- Score 1-3: Implementation cost >$2M, timeline >18 months, significant core system changes
+- Score 4-6: Implementation cost $350K-$2M, timeline 4-18 months, moderate integration
+- Score 7-8: Implementation cost $85K-$350K, timeline 6-16 weeks, low disruption
+- Score 9-10: Implementation cost <$85K, timeline <6 weeks, plug-and-play deployment
+
+OPPORTUNITY COST CALIBRATION
+- Score 1-3: No competitive pressure, manual process adequate, low regulatory risk
+- Score 4-6: Industry peers beginning to deploy, process inefficiency noted by leadership
+- Score 7-8: Top 3 competitors have deployed, process is a known bottleneck, regulatory expectation building
+- Score 9-10: Regulatory requirement imminent OR competitive parity requires deployment to retain market position OR manual process is creating measurable customer or financial harm today

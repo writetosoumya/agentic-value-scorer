@@ -1,0 +1,190 @@
+ENTERPRISE AI GOVERNANCE POLICY
+Meridian Insurance Group | Policy Reference: AI-GOV-001 | Version 3.1
+Effective Date: January 1, 2026 | Review Date: January 1, 2027
+Policy Owner: Chief AI & Data Officer | Approved by: Board Risk Committee
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 1: PURPOSE AND SCOPE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+This policy establishes Meridian Insurance Group's enterprise-wide framework for the responsible development, procurement, deployment, and ongoing governance of Artificial Intelligence systems. It applies to all AI systems including rule-based automation, machine learning models, generative AI, and agentic AI systems operating across all business units and geographies.
+
+This policy applies to:
+- Internal AI systems developed by Meridian technology teams
+- Third-party AI systems procured from vendors or accessed via API
+- AI systems embedded within enterprise software (ERP, CRM, claims management)
+- Experimental and pilot AI systems in sandbox environments
+- AI agents acting autonomously on behalf of Meridian employees or customers
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 2: AI RISK CLASSIFICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Meridian classifies all AI systems into four internal risk tiers. Classification determines the governance pathway, approval authority, and monitoring requirements.
+
+TIER 1 — CRITICAL AI SYSTEMS
+Definition: AI systems that make or materially influence decisions with direct financial, legal, or safety consequences for customers, employees, or the organization.
+Examples at Meridian:
+- Automated underwriting decisions for policies above $500,000
+- Claims fraud detection with autonomous payment hold capability
+- Customer credit and payment risk scoring
+- Algorithmic pricing engines for individual policy premiums
+- AI-assisted medical underwriting for life and health products
+Governance requirements:
+- Board Risk Committee approval required before production deployment
+- Annual independent model audit by approved third-party auditor
+- Mandatory explainability report for every decision affecting a customer
+- Real-time monitoring dashboard accessible to Chief Risk Officer
+- Maximum 72-hour incident response SLA for model failures
+- Customer right to human review of any AI-influenced decision
+
+TIER 2 — HIGH RISK AI SYSTEMS
+Definition: AI systems that significantly influence operational decisions, employee workflows, or customer interactions but do not make fully autonomous consequential decisions.
+Examples at Meridian:
+- Claims triage and routing agents
+- Customer service AI with authority to offer settlements up to $5,000
+- HR performance evaluation support tools
+- Vendor risk scoring systems
+- Regulatory change impact assessment tools
+Governance requirements:
+- Chief AI & Data Officer approval before production deployment
+- Semi-annual model performance review
+- Human-in-the-loop required for all decisions above defined thresholds
+- Bias audit required before deployment and annually thereafter
+- Incident log maintained and reviewed monthly by AI Governance Committee
+
+TIER 3 — MODERATE RISK AI SYSTEMS
+Definition: AI systems that augment employee productivity, support internal operations, or provide informational outputs without directly affecting customers.
+Examples at Meridian:
+- Internal policy Q&A and knowledge management agents
+- Document summarization and drafting tools
+- IT service management automation
+- Meeting transcription and summarization
+- Code generation and review assistance
+Governance requirements:
+- Business unit AI Lead approval
+- Quarterly performance review
+- Employee disclosure that AI tools are in use
+- Data handling agreement if system processes employee PII
+
+TIER 4 — LOW RISK AI SYSTEMS
+Definition: AI systems with narrow, bounded functionality, read-only access, and no individual-affecting outputs.
+Examples at Meridian:
+- Spam and phishing detection
+- Search and information retrieval
+- Scheduled report generation
+- Infrastructure monitoring and alerting
+Governance requirements:
+- Standard IT change management process
+- Annual review as part of system audit
+- No additional AI-specific governance required
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 3: AGENTIC AI SPECIFIC CONTROLS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Meridian recognizes that agentic AI systems — those that take sequences of actions, use tools, and operate with degrees of autonomy — require controls beyond standard AI governance.
+
+AUTONOMY THRESHOLDS — MERIDIAN SPECIFIC RULES
+The following autonomy thresholds are absolute and cannot be overridden by business unit leadership:
+
+Financial autonomy limits:
+- Agents CANNOT autonomously approve or deny claims above $2,500 without human review
+- Agents CANNOT initiate payments above $1,000 without dual human authorization
+- Agents CANNOT modify premium rates for active policies without underwriter sign-off
+- Agents CANNOT cancel or lapse policies without written human authorization
+
+Customer interaction limits:
+- Agents CAN handle routine inquiries, status updates, and document requests autonomously
+- Agents CANNOT make settlement offers above $5,000 without claims adjuster approval
+- Agents CANNOT communicate adverse underwriting decisions — human must deliver these
+- Agents MUST disclose AI identity at the start of every customer interaction
+
+Data access limits:
+- Agents CANNOT access customer medical records without explicit consent and legal review
+- Agents CANNOT cross-reference customer data across product lines without data governance approval
+- Agents CAN access claims history, policy documents, and publicly available data within defined scope
+
+HUMAN-IN-THE-LOOP (HITL) REQUIREMENTS
+Meridian requires explicit HITL gates for the following agent actions:
+1. Any write action modifying a customer record
+2. Any financial transaction initiated by an agent
+3. Any communication sent to a customer on a claim or underwriting decision
+4. Any agent action that cannot be reversed within 24 hours
+5. Any agent operating outside its defined scope (novel situation handling)
+
+AGENT IDENTITY AND DISCLOSURE
+All customer-facing AI agents must:
+- Identify as AI at the start of every interaction
+- Provide a reference number for every interaction for audit purposes
+- Offer human escalation within the first 60 seconds of any interaction
+- Never impersonate a named Meridian employee
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 4: DATA CLASSIFICATION AND AI ACCESS RULES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Meridian's data classification framework defines four tiers and sets explicit rules for AI system access.
+
+DATA CLASS 1 — RESTRICTED
+Definition: Data whose unauthorized disclosure would cause severe harm, regulatory violation, or significant financial loss.
+Includes: Medical underwriting data, Social Security Numbers, banking account details, attorney-client privileged communications, board-level strategic plans
+AI access rules:
+- AI systems CANNOT store Restricted data in external model APIs or cloud LLM endpoints
+- Restricted data processed by AI must use on-premise or private cloud infrastructure
+- Every AI access to Restricted data must be logged and reviewed monthly
+- Encryption at rest and in transit mandatory — AES-256 minimum
+- No generative AI system may use Restricted data as training or fine-tuning input
+
+DATA CLASS 2 — CONFIDENTIAL
+Definition: Internal business data whose disclosure would cause competitive harm or regulatory exposure.
+Includes: Customer PII (name, address, policy details), claims history, premium and pricing data, vendor contracts, employee performance records
+AI access rules:
+- External LLM APIs permitted only with an executed Data Processing Agreement (DPA)
+- Data must be anonymized or pseudonymized where AI task does not require identification
+- Retention in LLM context limited to the duration of the task — no persistent storage in third-party systems
+- GDPR Article 28 processor requirements apply to all AI vendors handling Confidential data
+
+DATA CLASS 3 — INTERNAL
+Definition: Operational data used for day-to-day business that is not intended for public disclosure.
+Includes: Internal policy documents, process guides, IT system documentation, meeting notes, project plans
+AI access rules:
+- Standard enterprise AI tools permitted (Microsoft Copilot, approved LLM tools)
+- No special access controls beyond standard employee authentication
+- AI-generated outputs based on Internal data must be labeled as AI-generated
+
+DATA CLASS 4 — PUBLIC
+Definition: Information intentionally made available to external parties.
+Includes: Published policy documents, regulatory filings, press releases, product brochures
+AI access rules: No restrictions. Suitable for RAG corpus, training data, and public-facing AI systems.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 5: AI PROCUREMENT AND VENDOR GOVERNANCE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+All third-party AI systems and model API vendors must meet Meridian's vendor AI governance requirements before procurement approval.
+
+Mandatory vendor requirements:
+- SOC 2 Type II certification within the last 12 months
+- Executed Data Processing Agreement covering AI-specific data handling
+- Model card or equivalent technical documentation for any foundation model used
+- Incident notification within 24 hours of any security or data breach
+- Right to audit vendor AI systems upon reasonable notice
+- Prohibition on using Meridian data for model training without explicit written consent
+
+Prohibited AI vendors:
+- Vendors headquartered in or processing data through jurisdictions on Meridian's restricted country list
+- Vendors unable to demonstrate GDPR or equivalent privacy compliance
+- Vendors whose model training data practices cannot be verified
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 6: AI INCIDENT RESPONSE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+AI Incident Definition: Any AI system behavior that causes or could cause harm to customers, employees, the organization, or third parties. Includes model failures, biased outputs, data leakage, unauthorized autonomous actions, and hallucinations affecting consequential decisions.
+
+Incident severity levels:
+- SEVERITY 1 (Critical): Customer financial harm, regulatory violation, data breach. Response: Immediate system suspension, CRO notification within 1 hour, regulatory notification within 72 hours where required.
+- SEVERITY 2 (High): Biased output affecting a protected class, unauthorized agent action, model performance degradation >20%. Response: System review within 4 hours, AI Governance Committee notification within 24 hours.
+- SEVERITY 3 (Medium): Isolated hallucination affecting a non-consequential decision, minor performance drift. Response: Root cause analysis within 5 business days, remediation plan within 10 business days.
+- SEVERITY 4 (Low): User complaint about AI quality, minor unexpected behavior. Response: Standard IT ticket process, quarterly review.

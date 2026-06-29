@@ -1,0 +1,148 @@
+ARM™ — AGENTIFICATION RISK MODEL V.1
+The Enterprise AI Lens | Issue 2
+Author: Soumya V. Jom | Enterprise AI Governance & Strategy Leader
+Published: May 26, 2026
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CORE PREMISE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Most AI governance frameworks ask: How do we govern the AI?
+ARM™ asks a different question: How do we govern what agentification does to the enterprise?
+
+The greatest risks of agentification may not come from AI malfunctioning, but from subtle shifts in human and organizational behavior. These are not model failures. They are enterprise transformation consequences.
+
+Built around a simple principle:
+Net Enterprise Value = Benefit Realization − Capability Debt
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+THE HIDDEN RISK OF AGENTIFICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+An enterprise agentifies 40% of its operations. Productivity rises. Costs fall. Cycle times shrink. The board celebrates. Transformation declared a success.
+
+Five years later, a market disruption arrives. A novel customer issue. A regulatory shift. An edge case the agents were never trained to handle. And the organization discovers: the people who once knew how to reason through the problem are gone.
+
+The enterprise didn't fail because the AI was wrong. It failed because nobody was left who could tell.
+
+This is Capability Debt — the hidden cost of agentification success.
+
+Observable signals of Capability Debt accumulation:
+- AI recommendations go unchallenged
+- Escalation behaviors decline
+- Institutional knowledge quietly disappears
+- Human review becomes ceremonial
+- Edge cases expose capability gaps no one knew existed
+
+By the time these patterns become visible, the dependency is already structural.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+THE FIVE DOMAINS OF ARM™
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARM™ maps 18 enterprise risks across five domains:
+
+DOMAIN 1 — EXECUTION INTEGRITY
+Core question: Can the work still be executed correctly?
+Risks assessed: accuracy of autonomous execution, error detection capability, override mechanisms, quality assurance without human review, process exception handling.
+Key risk: When AI handles execution continuously, human ability to detect execution failures degrades. Errors that were once caught in review become invisible.
+
+DOMAIN 2 — DECISION INTEGRITY
+Core question: Are humans deciding, or merely approving?
+Risks assessed: meaningful human oversight vs. rubber-stamp approval, authority shaping, concurrence validation, decision quality under AI recommendation bias.
+Key risk: Authority Shaping — when AI recommendations become the default, humans lose the habit and skill of independent judgment. Approval becomes ceremonial rather than substantive.
+Named risk — Concurrence Validation: humans approving AI outputs without genuinely evaluating them, creating the appearance of oversight without the substance.
+
+DOMAIN 3 — CAPABILITY DEBT
+Core question: What human capabilities are being consumed in pursuit of efficiency?
+Risks assessed: skill atrophy rate, succession planning gaps, training pipeline health, dependency concentration, recovery capability.
+Key risk: Cognitive Atrophy — when AI substitutes for thinking rather than augmenting it, human capability degrades over time. This risk is invisible until a crisis requires human judgment that no longer exists at sufficient depth.
+Named risk — Succession Failure: when institutional knowledge is embedded in agent logic rather than human expertise, the organization cannot replace, retrain, or adapt the capability when needed.
+
+DOMAIN 4 — KNOWLEDGE SUSTAINABILITY
+Core question: Is enterprise knowledge being preserved or transferred to systems?
+Risks assessed: knowledge documentation, tacit knowledge capture, institutional memory, agent dependency on undocumented expertise, knowledge transfer mechanisms.
+Key risk: When expert knowledge is operationalized into agent logic without documentation, the enterprise loses the ability to audit, update, or recreate the reasoning. The knowledge becomes locked inside a system that cannot explain itself.
+
+DOMAIN 5 — ENTERPRISE ADAPTATION
+Core question: Can the organization still respond when reality changes?
+Risks assessed: change response capability, regulatory adaptation speed, novel situation handling, edge case fragility, organizational resilience.
+Key risk — Edge Case Fragility: agents trained on known scenarios perform well until reality presents a scenario outside their training distribution. Organizations with high capability debt cannot compensate with human judgment when this occurs.
+Named risk — Escalation Integrity Failure: the escalation path exists on paper but the humans at the top of the escalation chain no longer have the expertise to resolve what is escalated to them.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+18 ENTERPRISE RISKS MAPPED BY DOMAIN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Execution Integrity (5 risks):
+1. Autonomous execution accuracy degradation
+2. Error detection capability loss
+3. Override and intervention mechanism failure
+4. Quality assurance gap without human review
+5. Process exception handling failure
+
+Decision Integrity (4 risks):
+6. Authority Shaping — AI recommendations become de facto decisions
+7. Concurrence Validation — ceremonial human approval
+8. Decision quality degradation under recommendation bias
+9. Meaningful oversight erosion
+
+Capability Debt (3 risks):
+10. Cognitive Atrophy — skill degradation through AI substitution
+11. Succession Failure — institutional knowledge locked in agent logic
+12. Training pipeline collapse — new talent develops on AI outputs not expertise
+
+Knowledge Sustainability (3 risks):
+13. Tacit knowledge loss — expertise operationalized without documentation
+14. Institutional memory transfer failure
+15. Audit and explainability gap in agent reasoning
+
+Enterprise Adaptation (3 risks):
+16. Edge Case Fragility — novel situation handling failure
+17. Escalation Integrity Failure — escalation path without capable humans
+18. Regulatory and market adaptation speed loss
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ARM™ SCORING FRAMEWORK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Each domain is scored 0–10. Higher score = higher risk.
+
+Composite ARM™ score weights:
+- Execution Integrity:     25%
+- Decision Integrity:      25%
+- Capability Debt:         20%
+- Knowledge Sustainability: 15%
+- Enterprise Adaptation:   15%
+
+Risk tiers:
+0.0–3.0  → GREEN   — Proceed with standard governance
+3.1–5.5  → AMBER   — Proceed with enhanced controls
+5.6–7.5  → RED     — Phased deployment only. Independent review required.
+7.6–10.0 → CRITICAL — Do not deploy without executive sign-off and external audit
+
+ARM™ Risk Multiplier = 1 + (Composite Score / 10)
+Applied as a penalty multiplier in AVRE™ NEV calculation.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ARM™ IN THE BROADER FRAMEWORK ARCHITECTURE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARM™ is the second layer in a three-framework governance architecture:
+
+Are we building the right AI?         → TraceSense™
+Are we building it responsibly?        → ARM™
+Are we creating real enterprise value? → AVRE™
+
+ARM™ is not a warning against agentification. It is a framework for doing it responsibly. The enterprises that win the next decade will not be those that deploy the most agents. They will be the ones who preserve the judgment, expertise, institutional knowledge, and adaptive capacity required to direct them and recover when the unexpected happens.
+
+The question was never whether to agentify. The question is whether you can afford the debt.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DESIGN PRINCIPLES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+- ARM™ is an original proprietary framework developed independently by Soumya V. Jom.
+- ARM™ addresses a new class of enterprise risks that traditional governance models rarely address.
+- The framework governs what agentification does to the enterprise — not just what the AI does.
+- Capability Debt is a structural risk, not an operational one. It compounds silently.

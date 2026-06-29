@@ -1,0 +1,96 @@
+ENTERPRISE AGENTIFICATION USE CASE REFERENCE LIBRARY
+Governance and Value Assessment Guide | Enterprise AI Practice
+
+CATEGORY 1: KNOWLEDGE WORK AUTOMATION
+
+Use Case 1.1: Policy and Compliance Q&A Agent
+Description: RAG-powered agent answering employee questions from HR, IT, legal, and compliance policy documents.
+Typical Autonomy Level: READ ONLY — surfaces answers, does not execute policy actions.
+Data Sensitivity: MODERATE — may contain HR policy details, benefits information, limited PII in document corpus.
+Compliance Exposure: LOW-MODERATE — EU AI Act limited risk (transparency obligation). GDPR applies to PII in corpus.
+Capability Requirements: SharePoint/Confluence integration, chunking strategy for policy docs, citation mechanism.
+Key Risks: Hallucination of policy details (users may act on wrong information); outdated corpus (stale policies surface as current).
+Mitigation Best Practices: Citation of source document in every answer; confidence thresholds with "I don't know" path; automated corpus refresh cadence; human escalation for novel queries.
+Typical ARM™ Score: 2.5-3.5 (GREEN-AMBER)
+Typical AVRE™ NEV: 6.5-7.5 (MODERATE-HIGH)
+
+Use Case 1.2: Contract Review and Summarization Agent
+Description: Agent that extracts key terms, flags non-standard clauses, and summarizes contracts for legal review.
+Typical Autonomy Level: READ + DRAFT — generates summaries and flags, but human attorney reviews and approves.
+Data Sensitivity: HIGH — contracts contain PII, financial terms, confidential business information, trade secrets.
+Compliance Exposure: MODERATE-HIGH — attorney-client privilege implications; regulated in legal services context; EU AI Act high-risk potential if used in judicial administration.
+Capability Requirements: PDF extraction with table handling, legal ontology for clause classification, version comparison.
+Key Risks: Miss of a material clause; incorrect clause interpretation; privilege breach if data sent to external model API without DPA.
+Mitigation Best Practices: Always human-in-the-loop for final legal review; no auto-execution of contract terms; explicit data processing agreement with AI vendor; output explicitly labeled as AI-generated draft.
+Typical ARM™ Score: 4.5-6.0 (AMBER-RED)
+Typical AVRE™ NEV: 5.5-7.0 (MODERATE-HIGH)
+
+Use Case 1.3: Research and Competitive Intelligence Agent
+Description: Agent that searches web and internal documents to produce structured competitive analysis briefings.
+Typical Autonomy Level: READ + SYNTHESIZE — does not take write actions. Human reviews output before use.
+Data Sensitivity: LOW-MODERATE — web data is public; internal data depends on what the agent accesses.
+Compliance Exposure: LOW — primarily transparency obligation under EU AI Act. Copyright considerations for web-scraped content.
+Capability Requirements: Web search tool integration, multi-source synthesis, structured output format.
+Key Risks: Outdated web data presented as current; hallucination of competitor product details; copyright infringement in output.
+Mitigation Best Practices: Source attribution in every output; recency filtering on web search; explicit disclaimer that output is AI-synthesized and requires human verification.
+Typical ARM™ Score: 1.5-2.5 (GREEN)
+Typical AVRE™ NEV: 6.0-8.0 (MODERATE-HIGH)
+
+CATEGORY 2: PROCESS AUTOMATION WITH DECISION SUPPORT
+
+Use Case 2.1: IT Service Management (ITSM) Triage Agent
+Description: Agent that classifies incoming IT tickets, suggests resolution paths, and routes to appropriate teams. May auto-resolve known issues.
+Typical Autonomy Level: MEDIUM — auto-resolves low-complexity tickets (password resets, access requests), escalates complex issues.
+Data Sensitivity: MODERATE — ticket content may include credentials (improperly shared), system architecture details, user behavior data.
+Compliance Exposure: MODERATE — employee monitoring implications; data residency considerations for global deployments.
+Capability Requirements: ITSM platform integration (ServiceNow, Jira Service Management), classification model, knowledge base integration, escalation logic.
+Key Risks: Miscategorization of a critical incident as low-priority; exposure of sensitive ticket data; agent loop on unresolvable ticket.
+Mitigation Best Practices: Mandatory human override capability on any ticket classification; SLA-based escalation to human if agent does not resolve within threshold; full audit log of agent actions per ticket.
+Typical ARM™ Score: 3.0-4.5 (AMBER)
+Typical AVRE™ NEV: 6.5-8.0 (HIGH)
+
+Use Case 2.2: HR Recruitment Screening Agent
+Description: Agent that screens resumes against job requirements, scores candidates, and prioritizes review queue for HR.
+Typical Autonomy Level: HIGH DECISION RISK — recommendations directly affect individuals' employment prospects.
+Data Sensitivity: VERY HIGH — resumes contain name, address, education, work history, and potentially protected characteristics.
+Compliance Exposure: CRITICAL — explicit high-risk category under EU AI Act Annex III (employment). EEOC implications in US. NYC Local Law 144 requires annual bias audit for automated employment decision tools.
+Capability Requirements: ATS integration, structured resume parsing, bias-aware scoring model, explainability layer.
+Key Risks: Systematic bias against protected groups; non-compliance with NYC LL144, EU AI Act; disparate impact on underrepresented candidates; reputational and legal liability.
+Mitigation Best Practices: Annual bias audit by independent third party; full explainability of screening criteria; human review required for all rejection decisions; candidate right to explanation; regulatory notification where required.
+Typical ARM™ Score: 7.5-9.0 (CRITICAL)
+Typical AVRE™ NEV: 2.0-4.5 (CONDITIONAL-LOW VALUE after ARM™ penalty)
+
+Use Case 2.3: Financial Transaction Monitoring and Fraud Detection Agent
+Description: Agent that monitors transaction streams in real time, flags anomalies, and initiates holds or alerts.
+Typical Autonomy Level: HIGH — can initiate account holds autonomously, triggering real financial consequences.
+Data Sensitivity: VERY HIGH — financial PII, transaction history, account details. GLBA, GDPR, CCPA all apply.
+Compliance Exposure: HIGH — SR 11-7 model risk management applies; AML/BSA regulatory obligations; DORA (Digital Operational Resilience Act) for EU financial entities from Jan 2025.
+Capability Requirements: Real-time streaming data integration, low-latency inference, explainability for regulatory reporting, case management integration.
+Key Risks: False positive rate creating customer friction and legal liability; missed fraud events; model drift in adversarial environment; DORA incident reporting obligations.
+Mitigation Best Practices: Two-tier review (agent flags, human approves holds above threshold); continuous model monitoring with drift detection; SR 11-7 model documentation; quarterly backtesting; explainable AI output for regulatory examiners.
+Typical ARM™ Score: 6.0-8.0 (RED-CRITICAL)
+Typical AVRE™ NEV: 5.0-7.0 (MODERATE — high value but high ARM™ penalty)
+
+CATEGORY 3: STRATEGIC AND EXECUTIVE SUPPORT
+
+Use Case 3.1: Project Portfolio Management Intelligence Agent
+Description: Agent that aggregates project status across tools, identifies at-risk projects, and generates executive briefings.
+Typical Autonomy Level: READ + ALERT — surfaces insights, does not modify project records or allocate resources.
+Data Sensitivity: MODERATE — project financials, resource allocation, strategic roadmap details.
+Compliance Exposure: LOW — internal strategic intelligence. No individual-affecting decisions.
+Capability Requirements: Multi-tool integration (Jira, Smartsheet, ServiceNow SPM, MS Project), data normalization across formats, executive narrative generation.
+Key Risks: Incorrect risk assessment leading to misallocated executive attention; data staleness; hallucinated status summaries.
+Mitigation Best Practices: Source citation on every status claim; human PM review gate before executive distribution; confidence scoring on risk flags.
+Typical ARM™ Score: 2.0-3.0 (GREEN-AMBER)
+Typical AVRE™ NEV: 7.0-8.5 (HIGH)
+
+Use Case 3.2: Regulatory Intelligence and Change Management Agent
+Description: Agent that monitors regulatory changes (EU AI Act updates, SEC rules, FDA guidance) and generates impact assessments for the organization.
+Typical Autonomy Level: READ + SYNTHESIZE — produces briefings, does not file regulatory responses autonomously.
+Data Sensitivity: LOW — primarily public regulatory documents.
+Compliance Exposure: LOW — the agent is helping manage compliance, not itself subject to high-risk classification.
+Capability Requirements: Regulatory feed integration or web search, document comparison (version diffing), organizational context for impact assessment (what systems, what jurisdictions).
+Key Risks: Missed regulatory change with material impact; incorrect interpretation creating false compliance confidence.
+Mitigation Best Practices: Human legal/compliance review required for any output that informs compliance decisions; explicit uncertainty flagging; sourcing with regulatory document citations.
+Typical ARM™ Score: 1.5-2.5 (GREEN)
+Typical AVRE™ NEV: 7.5-9.0 (HIGH)

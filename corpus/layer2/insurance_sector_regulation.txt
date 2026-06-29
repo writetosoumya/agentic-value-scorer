@@ -1,0 +1,167 @@
+INSURANCE SECTOR AI REGULATION REFERENCE
+Applicable Regulatory Framework for AI Deployment in US Insurance Operations
+Meridian Insurance Group | Compliance Reference Document | Version 2.0 | 2026
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 1: NAIC MODEL BULLETIN ON AI (2023) — KEY PROVISIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The National Association of Insurance Commissioners (NAIC) adopted a Model Bulletin on the Use of Artificial Intelligence Systems by Insurers in 2023. While not binding law, it has been adopted or referenced by 38 states and represents the baseline regulatory expectation for AI governance in insurance.
+
+GOVERNANCE EXPECTATIONS
+Insurers are expected to:
+- Establish a written AI governance program proportionate to the scale and risk of AI use
+- Designate accountable leadership for AI oversight (equivalent to a Chief AI Officer or senior executive sponsor)
+- Maintain an inventory of all AI systems used in insurance operations, including third-party systems
+- Document the purpose, data inputs, decision outputs, and risk controls for each AI system
+- Conduct ongoing monitoring of AI system performance, including disparate impact testing
+
+UNDERWRITING AND RATING AI — SPECIFIC REQUIREMENTS
+AI systems used in underwriting or rating decisions must:
+- Produce decisions that are actuarially justified — AI cannot introduce factors not permitted under state rating laws
+- Not use prohibited rating factors even as proxy variables: race, color, creed, national origin, religion, or sex (NAIC model law)
+- Be explainable to regulators upon request — black-box models face heightened scrutiny
+- Be tested for unfair discrimination at least annually
+- Maintain audit trails for all decisions for a minimum of 7 years
+
+CLAIMS AI — SPECIFIC REQUIREMENTS
+AI systems used in claims handling must:
+- Comply with state unfair claims settlement practices acts — AI cannot create undue delays or denials
+- Provide a human review pathway for any claimant who disputes an AI-influenced decision
+- Not use AI to systematically delay or deny claims without documented actuarial basis
+- Disclose AI use in claims handling to state regulators upon request
+
+CONSUMER DISCLOSURE REQUIREMENTS
+Insurers must be prepared to:
+- Inform consumers when AI materially influences an adverse underwriting or claims decision
+- Provide a meaningful explanation of the factors that contributed to the decision
+- Offer a human review process for consumers who wish to contest an AI-influenced decision
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 2: STATE-LEVEL AI INSURANCE REGULATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+COLORADO SB 169 — EXTERNAL CONSUMER DATA AND INFORMATION SOURCES (EFFECTIVE 2023)
+Colorado requires insurers using external consumer data and information sources (ECDIS) — including AI and machine learning — in insurance decisions to:
+- File a governance program with the Colorado Division of Insurance annually
+- Conduct and document testing for unfair discrimination
+- Maintain records of all ECDIS used and their role in decisions
+- Prohibited from using external data that serves as a proxy for race, color, national origin, religion, sex, sexual orientation, disability, or gender identity in violation of Colorado law
+Application to Meridian: Any AI model used in Colorado underwriting or rating must be registered, tested for discrimination, and documented. Agentic AI involved in these decisions requires additional review.
+
+NEW YORK DEPARTMENT OF FINANCIAL SERVICES (NYDFS) — CIRCULAR LETTER 2019-1 AND 2024 UPDATES
+New York requires life insurers using external data and algorithms to:
+- Ensure data and algorithms comply with applicable law (no proxy discrimination)
+- Demonstrate that outcomes are actuarially justified
+- Maintain documentation sufficient for DFS examination
+The 2024 update extends scrutiny to AI systems broadly, including generative AI used in customer communications and claims.
+Application to Meridian: All New York-facing AI systems, including customer service agents, must comply. Generative AI responses to customers in New York require human review capability and must not constitute unauthorized practice of insurance.
+
+CALIFORNIA DEPARTMENT OF INSURANCE — ALGORITHMIC RATE AND RISK CLASSIFICATION GUIDANCE
+California has issued guidance restricting the use of certain external data sources and algorithms in auto and homeowners insurance. Key provisions:
+- ZIP code alone cannot be the primary rating factor
+- Credit-based insurance scores face heightened scrutiny for disparate impact
+- AI systems must be submitted for rate filing review if they materially affect pricing
+Application to Meridian: California personal lines products require additional algorithmic review before deployment of any AI pricing or underwriting tool.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 3: FEDERAL REGULATORY CONSIDERATIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FAIR CREDIT REPORTING ACT (FCRA)
+When AI systems use credit-based insurance scores or external data that constitutes a consumer report:
+- Adverse action notices must be provided to consumers
+- Consumers have the right to dispute information and obtain free copies of reports
+- AI systems must be designed to support FCRA compliance workflows
+Application to Meridian: Any AI using credit data in underwriting or claims must trigger FCRA adverse action notice workflows. Agents cannot bypass these requirements.
+
+GRAMM-LEACH-BLILEY ACT (GLBA)
+Applies to AI systems handling nonpublic personal financial information:
+- Safeguards Rule requires appropriate technical controls for AI systems handling NPI
+- Privacy notices must accurately describe how AI uses customer data
+- Third-party AI vendors handling NPI must sign appropriate agreements
+Application to Meridian: All AI vendors processing customer financial data require GLBA-compliant data sharing agreements. RAG systems using customer financial data must comply with Safeguards Rule.
+
+AMERICANS WITH DISABILITIES ACT (ADA)
+AI systems used in customer service or claims must:
+- Not discriminate against individuals with disabilities in the delivery of services
+- Provide accessible alternatives to AI-only interaction channels
+- Not use disability status as a factor in claims processing speed or settlement offers
+Application to Meridian: Customer-facing AI agents must offer human alternatives. AI claims systems must be tested for disparate outcomes affecting claimants with disabilities.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 4: EU AI ACT APPLICATION TO MERIDIAN EU OPERATIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Meridian's EU operations (Meridian Europe BV, Netherlands) must comply with EU AI Act provisions. Key applications to insurance:
+
+HIGH-RISK CLASSIFICATION — INSURANCE SPECIFIC
+The following Meridian AI use cases are presumptively HIGH-RISK under EU AI Act Annex III:
+- Credit scoring used in insurance underwriting (Annex III, point 5b)
+- AI systems evaluating access to essential services including insurance (Annex III, point 5)
+- AI used in employment decisions affecting Meridian staff (Annex III, point 4)
+
+High-risk obligations for Meridian EU:
+- Conformity Assessment before deployment
+- Registration in EU AI Act database
+- Technical documentation including model cards
+- Human oversight measures built into system design
+- Accuracy, robustness, and cybersecurity standards met
+- Ongoing monitoring with annual reporting to AI Office
+
+TRANSPARENCY OBLIGATIONS — ALL EU CUSTOMER-FACING AI
+- All chatbots and AI assistants must disclose AI identity
+- AI-generated insurance documents must be labeled
+- Emotion recognition (prohibited in customer service contexts) cannot be deployed
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 5: ACTUARIAL STANDARDS OF PRACTICE (ASOP) FOR AI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The Actuarial Standards Board has issued guidance on AI use in actuarial work relevant to Meridian:
+
+ASOP No. 56 — MODELING
+Applies to actuarial work using models including AI and ML models:
+- Actuaries must understand the model sufficiently to communicate results and limitations
+- Model risk must be identified, assessed, and managed
+- Documentation must be sufficient for a qualified actuary to evaluate the work
+- Reliance on AI outputs requires the actuary to take responsibility for reasonableness
+Application to Meridian: Actuarial sign-off required for any AI system whose outputs feed into reserving, pricing, or capital calculations. Actuaries cannot rely on AI black-box outputs without sufficient model understanding.
+
+ASOP No. 23 — DATA QUALITY
+Data used in AI systems for actuarial purposes must meet quality standards:
+- Appropriate data for the intended purpose
+- Known data limitations disclosed
+- Data quality checks documented
+Application to Meridian: Training data for underwriting and pricing AI must be reviewed by an actuary for appropriateness and quality before model deployment.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 6: INSURANCE AI RISK SCORING IMPLICATIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+When evaluating an AI use case for deployment at Meridian, the following regulatory factors elevate ARM™ risk scores:
+
+Autonomy Risk elevators (insurance-specific):
+- Agent can approve or deny claims (Unfair Claims Settlement Practices Act exposure)
+- Agent can modify policy terms or coverage (requires licensed underwriter)
+- Agent can make binding coverage representations to customers (E&O liability)
+- Agent operates in states with specific AI disclosure requirements (CO, NY, CA)
+
+Compliance Exposure elevators (insurance-specific):
+- Use case involves underwriting or rating decisions → NAIC Bulletin, state rating laws, FCRA apply
+- Use case involves claims decisions → Unfair Claims Settlement Practices Acts apply
+- Use case operates in EU → EU AI Act high-risk classification likely
+- Use case uses credit data → FCRA adverse action requirements apply
+- Use case affects protected classes → Colorado SB 169, disparate impact testing required
+
+Data Governance elevators (insurance-specific):
+- Use case processes medical underwriting data → Data Class 1 (Restricted) — no external LLM
+- Use case processes customer PII → GLBA Safeguards Rule, GDPR for EU data
+- Use case accesses claims history → retention requirements, audit trail mandatory
+- Use case uses external data sources → NAIC ECDIS requirements apply
+
+Equity and Bias elevators (insurance-specific):
+- Use case influences pricing or underwriting → annual disparate impact testing required
+- Use case affects claims settlement → testing for protected class disparities required
+- Use case uses ZIP code, credit, or socioeconomic proxies → heightened scrutiny
+- Use case deployed in Colorado → mandatory discrimination testing and filing
