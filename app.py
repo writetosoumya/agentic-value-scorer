@@ -369,14 +369,16 @@ if sidebar_page == "🏠 Home":
                         intent   = final_state.get("intent", "SCORE")
                         response = final_state.get("agent_response", "")
 
-                        if final_state.get("hitl_required") and final_state.get("pending_brief"):
-                            st.session_state.hitl_pending = True
-                            st.session_state.agent_state["pending_brief"] = final_state["pending_brief"]
-
                         st.session_state.messages.append({"role": "assistant", "content": response, "intent": intent})
                         st.session_state.agent_state["messages"] = [
                             {"role": m["role"], "content": m["content"]} for m in st.session_state.messages
                         ]
+
+                        if final_state.get("hitl_required") and final_state.get("pending_brief"):
+                            st.session_state.hitl_pending = True
+                            st.session_state.agent_state["pending_brief"] = final_state["pending_brief"]
+                            st.session_state.agent_state["use_case_name"] = final_state.get("use_case_name", "Governance Brief")
+
                     except Exception as e:
                         st.session_state.messages.append({"role": "assistant", "content": f"⚠️ Agent error: {str(e)[:200]}. Please try again.", "intent": ""})
                 st.rerun()
@@ -403,9 +405,6 @@ if sidebar_page == "🏠 Home":
                     try:
                         final_state = run_graph(graph, action, session_id, corpus, st.session_state.agent_state)
                         st.session_state.agent_state = {k: v for k, v in final_state.items() if k != "corpus"}
-                        if final_state.get("hitl_required") and final_state.get("pending_brief"):
-                            st.session_state.hitl_pending = True
-                            st.session_state.agent_state["pending_brief"] = final_state["pending_brief"]
                         st.session_state.messages.append({
                             "role": "assistant",
                             "content": final_state.get("agent_response", ""),
@@ -414,6 +413,10 @@ if sidebar_page == "🏠 Home":
                         st.session_state.agent_state["messages"] = [
                             {"role": m["role"], "content": m["content"]} for m in st.session_state.messages
                         ]
+                        if final_state.get("hitl_required") and final_state.get("pending_brief"):
+                            st.session_state.hitl_pending = True
+                            st.session_state.agent_state["pending_brief"] = final_state["pending_brief"]
+                            st.session_state.agent_state["use_case_name"] = final_state.get("use_case_name", "Governance Brief")
                     except Exception as e:
                         st.session_state.messages.append({"role": "assistant", "content": f"⚠️ {e}", "intent": ""})
                 st.rerun()
